@@ -1,0 +1,20 @@
+# Exercice 
+
+- Service Utilisateur 
+
+    1. Créez un projet Spring Boot nommé UserService.
+    2. Ajoutez les dépendances nécessaires pour JPA.
+    3. Définissez une entité User avec les champs suivants : id, name, et email.
+    4. Créez un service et un contrôleur pour l'entité User.
+    5. Le contrôleur doit avoir une endpoint pour récupérer un utilisateur par son id.
+
+- Service Commande 
+
+    1. Créez un autre projet Spring Boot nommé OrderService.
+    2. De même, ajoutez les dépendances nécessaires pour JPA et votre base de données.
+    3. Définissez une entité Order avec les champs : orderId, userId et product.
+    4. Créez u un service et un contrôleur pour l'entité Order.
+    Le contrôleur doit avoir une endpoint pour récupérer toutes les commandes passées par un userId spécifique.
+
+
+- Quand le OrderService reçoit une requête pour récupérer les commandes d'un utilisateur, il devrait également communiquer avec le UserService pour récupérer les informations détaillées de cet utilisateur.

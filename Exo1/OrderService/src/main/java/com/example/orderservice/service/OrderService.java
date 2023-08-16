@@ -43,7 +43,7 @@ public class OrderService {
     public List<OrderResponseDto> findByProduct (String product){
         List<OrderResponseDto> orderResponseDtos = new ArrayList<>();
         List<Order> orders = orderRepository.findByProduct(product);
-        
+
         orders.forEach(o -> {
             User user = restClient.get("user/"+o.getUserId(), User.class);
             orderResponseDtos.add(OrderResponseDto.builder().id(o.getId()).user(user).product(o.getProduct()).build()) ;

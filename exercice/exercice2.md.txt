@@ -1,0 +1,29 @@
+# Exercice
+
+1. Service Auteur (AuthorService)
+        Créez un projet Spring Boot nommé AuthorService.
+        Ajoutez les dépendances nécessaires pour JPA et une base de données.
+        Modélisez une entité Author avec les champs suivants: id, firstName, lastName et nationality.
+        Créez un repository JPA, un service et un contrôleur pour l'entité Author.
+        Le contrôleur doit avoir des endpoints pour:
+            Ajouter un nouvel auteur.
+            Récupérer un auteur par son id.
+            Récupérer tous les auteurs.
+
+2. Service Livre (BookService)
+        Créez un autre projet Spring Boot nommé BookService.
+        Ajoutez les dépendances nécessaires pour JPA et la base de données.
+        Modélisez une entité Book avec les champs: bookId, title, isbn, publishedDate et authorId.
+        Créez un repository JPA, un service et un contrôleur pour l'entité Book.
+        Le contrôleur doit avoir des endpoints pour:
+            Ajouter un nouveau livre. Lors de l'ajout, assurez-vous que l'authorId correspond à un auteur existant en interrogeant le AuthorService.
+            Récupérer un livre par son bookId.
+            Récupérer tous les livres d'un auteur spécifique.
+
+3. Intégration
+        Quand le BookService reçoit une requête pour ajouter un livre ou récupérer les détails d'un livre, il doit également récupérer les informations détaillées de l'auteur correspondant à partir du AuthorService.
+      
+4. Sécurtié 
+Implémentez un mécanisme d'authentification et d'autorisation entre services en JWT et Spring Security
+
+    
